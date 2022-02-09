@@ -24,7 +24,7 @@ const forecast = (latitude, longitude , callback) => {
         }else if(body.error) {
             callback('unable to find location', undefined)
         } else {
-            callback(undefined, body.current.weather_descriptions[0] + ' and it is currently ' + body.current.temperature + ' degrees out. it feels like ' + body.current.feelslike + ' degrees out.'
+            callback(undefined, body.current.weather_descriptions[0] + ' and it is currently ' + body.current.temperature + ' degrees out. it feels like ' + body.current.feelslike + ' degrees out. Sasha is this cool because there is a wind speed of ' + body.current.wind_speed + 'm/s.'
             )
         }
     })
